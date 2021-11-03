@@ -1,0 +1,6 @@
+export const SET_VISIT_SPOTS = "VisitSpots: SET_VISIT_SPOTS";
+
+export const SET_VISIT_SPOTS_OF_SELECTED_COUNTIES =
+  "VisitSpots: SET_VISIT_SPOTS_OF_SELECTED_COUNTIES";
+
+export const ADD_NEW_VISIT_SPOT = "VisitSpots: ADD_NEW_VISIT_SPOT";

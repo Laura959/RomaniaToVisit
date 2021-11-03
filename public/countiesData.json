@@ -1,0 +1,340 @@
+{
+  "counties": [
+    {
+      "id": 1,
+      "county": "Alba",
+      "population": 342.376,
+      "size": 6.25,
+      "code": "AB",
+      "region": "Center"
+    },
+    {
+      "id": 2,
+      "county": "Arad",
+      "population": 430.629,
+      "size": 7.746,
+      "code": "AR",
+      "region": "West"
+    },
+    {
+      "id": 3,
+      "county": "Argeș",
+      "population": 612.431,
+      "size": 6.822,
+      "code": "AG",
+      "region": "South-Muntenia"
+    },
+    {
+      "id": 4,
+      "county": "Bacău",
+      "population": 616.168,
+      "size": 6.622,
+      "code": "BC",
+      "region": "North-East"
+    },
+    {
+      "id": 5,
+      "county": "Bihor",
+      "population": 575.398,
+      "size": 7.539,
+      "code": "BH",
+      "region": "North-West"
+    },
+    {
+      "id": 6,
+      "county": "Bistrița-Năsăud",
+      "population": 286.225,
+      "size": 5.358,
+      "code": "BN",
+      "region": "North-West"
+    },
+    {
+      "id": 7,
+      "county": "Botoșani",
+      "population": 412.626,
+      "size": 4.987,
+      "code": "BT",
+      "region": "North-East"
+    },
+    {
+      "id": 8,
+      "county": "Brașov",
+      "population": 549.217,
+      "size": 5.361,
+      "code": "BV",
+      "region": "Center"
+    },
+    {
+      "id": 9,
+      "county": "Brăila",
+      "population": 321.212,
+      "size": 4.766,
+      "code": "BR",
+      "region": "South-East"
+    },
+    {
+      "id": 10,
+      "county": "Bucharest",
+      "population": 1.883425,
+      "size": 240,
+      "code": "B",
+      "region": "Bucharest-Ilfov"
+    },
+    {
+      "id": 11,
+      "county": "Buzău",
+      "population": 451.069,
+      "size": 6.101,
+      "code": "BZ",
+      "region": "South-East"
+    },
+    {
+      "id": 12,
+      "county": "Caraș-Severin",
+      "population": 295.579,
+      "size": 8.532,
+      "code": "CS",
+      "region": "West"
+    },
+    {
+      "id": 13,
+      "county": "Călărași",
+      "population": 306.691,
+      "size": 5.087,
+      "code": "CL",
+      "region": "South-Muntenia"
+    },
+    {
+      "id": 14,
+      "county": "Cluj",
+      "population": 691.106,
+      "size": 6.672,
+      "code": "CJ",
+      "region": "North-West"
+    },
+    {
+      "id": 15,
+      "county": "Constanța",
+      "population": 684.082,
+      "size": 7.104,
+      "code": "CT",
+      "region": "South-East"
+    },
+    {
+      "id": 16,
+      "county": "Covasna",
+      "population": 210.177,
+      "size": 3.707,
+      "code": "CV",
+      "region": "Center"
+    },
+    {
+      "id": 17,
+      "county": "Dâmbovița",
+      "population": 518.745,
+      "size": 4.056,
+      "code": "DB",
+      "region": "South-Muntenia"
+    },
+    {
+      "id": 18,
+      "county": "Dolj",
+      "population": 660.544,
+      "size": 7.425,
+      "code": "DJ",
+      "region": "South-West Oltenia"
+    },
+    {
+      "id": 19,
+      "county": "Galați",
+      "population": 536.167,
+      "size": 4.465,
+      "code": "GL",
+      "region": "South-East"
+    },
+    {
+      "id": 20,
+      "county": "Giurgiu",
+      "population": 281.422,
+      "size": 3.544,
+      "code": "GR",
+      "region": "South-Muntenia"
+    },
+    {
+      "id": 21,
+      "county": "Gorj",
+      "population": 341.594,
+      "size": 5.572,
+      "code": "GJ",
+      "region": "South-West Oltenia"
+    },
+    {
+      "id": 22,
+      "county": "Harghita",
+      "population": 310.867,
+      "size": 6.637,
+      "code": "HR",
+      "region": "Center"
+    },
+    {
+      "id": 23,
+      "county": "Hunedoara",
+      "population": 418.565,
+      "size": 7.072,
+      "code": "HD",
+      "region": "West"
+    },
+    {
+      "id": 24,
+      "county": "Ialomița",
+      "population": 274.148,
+      "size": 4.455,
+      "code": "IL",
+      "region": "South-Muntenia"
+    },
+    {
+      "id": 25,
+      "county": "Iași",
+      "population": 772.348,
+      "size": 5.477,
+      "code": "IS",
+      "region": "North-East"
+    },
+    {
+      "id": 26,
+      "county": "Ilfov",
+      "population": 388.738,
+      "size": 1.564,
+      "code": "IF",
+      "region": "Bucharest-Ilfov"
+    },
+    {
+      "id": 27,
+      "county": "Maramureș",
+      "population": 478.659,
+      "size": 6.303,
+      "code": "MM",
+      "region": "North-West"
+    },
+    {
+      "id": 28,
+      "county": "Mehedinți",
+      "population": 265.39,
+      "size": 4.942,
+      "code": "MH",
+      "region": "South-West Oltenia"
+    },
+    {
+      "id": 29,
+      "county": "Mureș",
+      "population": 550.846,
+      "size": 6.705,
+      "code": "MS",
+      "region": "Center"
+    },
+    {
+      "id": 30,
+      "county": "Neamț",
+      "population": 470.766,
+      "size": 5.897,
+      "code": "NT",
+      "region": "North-East"
+    },
+    {
+      "id": 31,
+      "county": "Olt",
+      "population": 436.4,
+      "size": 5.503,
+      "code": "OT",
+      "region": "South-West Oltenia"
+    },
+    {
+      "id": 32,
+      "county": "Prahova",
+      "population": 762.886,
+      "size": 4.715,
+      "code": "PH",
+      "region": "South-Muntenia"
+    },
+    {
+      "id": 33,
+      "county": "Satu Mare",
+      "population": 344.36,
+      "size": 4.42,
+      "code": "SM",
+      "region": "North-West"
+    },
+    {
+      "id": 34,
+      "county": "Sălaj",
+      "population": 224.384,
+      "size": 3.867,
+      "code": "SJ",
+      "region": "North-West"
+    },
+    {
+      "id": 35,
+      "county": "Sibiu",
+      "population": 397.322,
+      "size": 5.432,
+      "code": "SB",
+      "region": "Center"
+    },
+    {
+      "id": 36,
+      "county": "Suceava",
+      "population": 634.81,
+      "size": 8.553,
+      "code": "SV",
+      "region": "North-East"
+    },
+    {
+      "id": 37,
+      "county": "Teleorman",
+      "population": 380.123,
+      "size": 5.788,
+      "code": "TR",
+      "region": "South-Muntenia"
+    },
+    {
+      "id": 38,
+      "county": "Timiș",
+      "population": 683.54,
+      "size": 8.692,
+      "code": "TM",
+      "region": "West"
+    },
+    {
+      "id": 39,
+      "county": "Tulcea",
+      "population": 213.083,
+      "size": 8.484,
+      "code": "TL",
+      "region": "South-East"
+    },
+    {
+      "id": 40,
+      "county": "Vaslui",
+      "population": 395.499,
+      "size": 5.317,
+      "code": "VS",
+      "region": "North-East"
+    },
+    {
+      "id": 41,
+      "county": "Vâlcea",
+      "population": 371.714,
+      "size": 5.764,
+      "code": "VL",
+      "region": "South-West Oltenia"
+    },
+    {
+      "id": 42,
+      "county": "Vrancea",
+      "population": 340.31,
+      "size": 4.854,
+      "code": "VN",
+      "region": "South-East"
+    }
+  ]
+}

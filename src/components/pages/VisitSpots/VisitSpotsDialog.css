@@ -1,0 +1,54 @@
+.dialogCard {
+  z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 800px;
+  min-height: 500px;
+}
+
+.cardContent {
+  margin-top: 2%;
+  text-align: justify;
+}
+
+.button {
+  width: 50%;
+}
+
+.buttonContent {
+  text-align: justify;
+  margin-left: 2%;
+  text-decoration: none;
+  color: #2e7d32;
+}
+
+.locationInfo {
+  color: rgb(119, 119, 119);
+  font-size: 14px;
+}
+
+.nearTownContentDiv {
+  width: 50%;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.nearTownInnerDiv {
+  text-align: justify;
+  color: #2e7d32;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.checkboxDiv {
+  display: flex;
+  flex-direction: row;
+}

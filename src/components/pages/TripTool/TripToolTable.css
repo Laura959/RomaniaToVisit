@@ -1,0 +1,11 @@
+.tripToolTable {
+  height: 650px;
+  width: 75%;
+  margin: auto;
+  background: #ffffff;
+}
+
+.loadingSpinner {
+  text-align: center;
+  margin-top: 15%;
+}

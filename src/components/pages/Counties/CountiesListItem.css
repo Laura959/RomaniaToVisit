@@ -1,0 +1,46 @@
+.listItem {
+  margin-top: 1.5%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.17);
+  box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.17);
+  cursor: pointer;
+}
+
+.listItem:hover {
+  background-color: #ff99002a;
+}
+
+.listItem:hover .itemContent {
+  color: #e65100;
+}
+
+.itemContent {
+  padding: 1%;
+  font-size: 20px;
+}
+
+.icon {
+  color: #ff9800;
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -100%;
+    width: 300%;
+    opacity: 0.3;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+    opacity: 1;
+  }
+}

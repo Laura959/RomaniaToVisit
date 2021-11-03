@@ -1,0 +1,29 @@
+.tripTool button {
+  margin-top: 2%;
+  margin-left: 20%;
+  background-color: #ffffff;
+  color: #e65100;
+  border: 1px solid #e65100;
+}
+
+.tripTool button:hover {
+  background-color: #e65100;
+  color: #ffffff;
+}
+
+.tripTool button:disabled {
+  border: 1px solid #b7babb;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.tableContainer {
+  width: 80%;
+  padding-top: 2%;
+  margin: auto;
+  margin-bottom: 3%;
+}
+
+.noSpotsMessage {
+  text-align: center;
+}

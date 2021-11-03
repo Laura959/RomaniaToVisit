@@ -1,0 +1,41 @@
+.container {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://cdn.getyourguide.com/img/location/569684c490259.jpeg/88.jpg")
+      no-repeat center fixed;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 42px;
+}
+
+.buttonGrid {
+  text-align: center;
+}
+
+.welcomeBtn {
+  background-color: #ff9800;
+  border: 1px solid #ff9800;
+  padding: 8px 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.welcomeBtn a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+}
+
+.welcomeBtn:hover {
+  background-color: #ec8e00;
+  border: 1px solid #ec8e00;
+}
