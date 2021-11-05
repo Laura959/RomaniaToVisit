@@ -1,0 +1,267 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "name": "Castle Peles",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Castelul_Peles%2C_Sinaia_-_Vedere_panoramica.jpg",
+      "location": "Sinaia",
+      "description": "Commissioned by King Carol I in 1873 and completed in 1883, the castle served as the summer residence of the royal family until 1947.",
+      "county": "Brașov",
+      "countyId": 8,
+      "nearTown": true,
+      "mountainArea": true,
+      "positiveReviews": [
+        "Wow!! Wow!! Wow!! What a sight for sore eyes! So incredible!! Mesmerizing!! Beautiful!! Fantastic!! Sooo gorgeous to see! The history and details.. All is incredible!! Must visit! Beautiful to see both floors. Most people are only doing ground floor, but it's really nice to see the first floor as well",
+        "Wonderful place we visit regularly. Autumn is glowing.",
+        "It's very pretty both outside and inside. I think the ground floor ticket is enough as the first floor is just more of the same. Also don't bother with the photo ticket, no one cared for it inside, maybe unless you have a big professional camera."
+      ],
+      "negativeReviews": [
+        "Nice place to visit but the high amount of fee to pay its to much as you cant visit to much.",
+        "Very expensive for the basic tour, one floor only. The price would double if you'd want to view another floor.",
+        "Advise.. Credit card is not allowed. Only cash"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Castle Bran",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Castelul_Bran2.jpg/1200px-Castelul_Bran2.jpg",
+      "location": "Bran",
+      "description": "Surrounded by an aura of mystery and legend and perched high atop a 200-foot-high rock, Bran Castle owes its fame to its imposing towers and turrets as well as to the myth created around Bram Stocker's Dracula.",
+      "county": "Brașov",
+      "countyId": 8,
+      "nearTown": true,
+      "mountainArea": true,
+      "positiveReviews": [
+        "Awesome piece of Romanian history with plenty of incredible reads of the years that have made it what you see today!! Highly recommend stopping in if your near.",
+        "Another wonder of the world crossed off my bucket list. Amazing scenery driving & walking up to the castle. Inside is amazing artifacts, literature & videos. A visit to the dungeon is worthwhile.",
+        "I liked the location so much! Fascinating nature around, recommend specially in the summer"
+      ],
+      "negativeReviews": [
+        "Loads of queuing even before the gates and ticket office opens. Too crowded inside. Not worth the trip. Sorry Dracula. We won't come back here or recommend it",
+        "Interesting history buried by a tourist trap. No limits on indoor gathering and is completely packed shoulder to shoulder with people.",
+        "Waste of time , However scenery from Sinaia to Bran was beautiful"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Transfagarasan",
+      "image": "https://cdn.romania-insider.com/cdn/ff/zsl3gda3Rgi7k0Bn0iHm4nA-IcbtV07RwzsZCX7z-nI/1569923269/public/2019-10/transfagarasan_by_gutescu_eduard_dreamstime.jpg",
+      "location": "Bascov",
+      "description": "Paved mountain road crossing the southern section of the Carpathian Mountains of Romania.",
+      "county": "Argeș",
+      "countyId": 3,
+      "nearTown": false,
+      "mountainArea": true,
+      "positiveReviews": [
+        "Words cannot really describe the beauty of this road that is worth doing by car but especially by motorcycle. photo I think I say everything",
+        "The road is nice. The view is ok. Follow my advice and dont go in the weekends. It will be hard traffic.",
+        "We passed this way by car, really nice view and experience. You should drive safely because there are a lot of serpentines. Amazing."
+      ],
+      "negativeReviews": [
+        "It can get very crowded durng the weekends or national holidays, it's better to avoid them if you can.",
+        "Well I thought I was in for a bit more of a challenging drive after reading Lonely Planets guide about it. Coming from New Zealand it was kind of disappointing. It was a lovely drive and the local gypsies moving their flocks was a nice diversion. Glad I did it though."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Turda Salt Mine",
+      "image": "https://twistedsifter.com/wp-content/uploads/2016/03/salina-turda-salt-mine-romania-3.jpg",
+      "location": "Durgău-Valea Sărată",
+      "description": "Turda Salt Mine is the world’s most spectacular underground formation shaped by people. Turda Salt Mine is one of the most spectacular tourist destinations in the world. It is the underground formation that people created in a special natural environment, in the depths of Transylvania, digging into the salt deposited after the evaporation of the sea that covered the entire region millions of years ago. Now, the salt from Turda Salt Mine could cover the salt requirement for the entire Planet for 60 years, if it were necessary.",
+      "county": "Cluj",
+      "countyId": 14,
+      "nearTown": false,
+      "mountainArea": false,
+      "positiveReviews": [
+        "Very pretty. Positively surprised. Every shot is an abstract art. Also lots of stuff for kids to play as well.",
+        "We really enjoyed it! The mine is spectacular,  the entry price is fair and can be bought online. We also went at the end of day so we didn't have to wait in any lines. Truly a very nice experience",
+        "Very impressive place. Big like a cathedral. Would be nice if there would be more benches so people can sit and rest, and not only walk continously."
+      ],
+      "negativeReviews": [
+        "They made it a fairground. Unbelievable! Very busy. Long waiting times for the elevators. Stairs were also very busy. Interesting to see how the romanians do this.",
+        "Don't try to visit it in a wheelchair. It is impossible and the staff didn't help at all. So disappointed.",
+        "There is no access for wheelchairs"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Palace of Culture",
+      "image": "https://roamingromania.com/wp-content/uploads/2018/12/iasi-culture-palace-garden.jpg",
+      "location": "Iasi",
+      "description": "The Iasi Palace of Culture (Palatul Culturii) is an early 20th century Neo-Gothic flamboyant architectural masterpiece and iconic building located in the city of Iaşi, Romania. The palace is one of the biggest buildings in the entire country, it covers an area of 34,236 m2 (368,510 sq ft). The building contains an astounding 298 rooms and an impressive 128 windows.",
+      "county": "Iași",
+      "countyId": 25,
+      "nearTown": true,
+      "mountainArea": false,
+      "positiveReviews": [
+        "It's a must to visit this attraction if you're in Iasi. It's full of history and architectural greatness. It's now part of a bigger attraction,  one of the best, beautiful mall in Romania and Europe. I really enjoyed!",
+        "Art, history, science and ethnographic museums. All in one place! Loved it!",
+        "Beautiful museum! The history is in its place! Visit all the exhibitions, including Cucuteni and the technology section. Enjoy!"
+      ],
+      "negativeReviews": [
+        "The building is nice, but the museum is not maintained by prepared people and you don't feel you leave enriched"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Black church",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Biserica_Neagra%2C_Brasov%2C_Romania.jpg",
+      "location": "Brasov",
+      "description": "Built by the Saxon (German) community of the city and represents the main Gothic-style monument in the country, as well as being the largest and one of the most important houses of worship in the region which belong to the Lutheran, i.e. Evangelical Church of Augustan Confession in Romania.",
+      "county": "Brașov",
+      "countyId": 8,
+      "nearTown": true,
+      "mountainArea": false,
+      "positiveReviews": [
+        "Great history and organ music concerts (Get tickets and info from the front gift shop)",
+        "The main attraction of the city, the Black Church was builded in the 14th century. The name is suposed to be after the fire that burned the city in 1689.",
+        "This Cathedral is one of the oldest and largest in Eastern Europe. The building has an amazing vibe even from outside."
+      ],
+      "negativeReviews": [
+        "It's not great. Expensive ticket. Too much dust and you can smell the mold. Nothing inside. I have seen so so much better!",
+        "Not worth the admission price, better to spend it on the organ recital concert, or enter for free on sunday service",
+        "Don't recommend visiting it. There are no paintings or something to be impressed about.  Just the outside is captivating. The ticket is a bit expensive just to see the church."
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Danube's Big Boilers",
+      "image": "http://www.romaniajournal.ro/wp-content/uploads/2014/11/decebal-cazane.jpg",
+      "location": "Orsova",
+      "description": "Picturesque section of the Danube River featuring 2 rocky cliffs forming a foaming gorge.",
+      "county": "Mehedinți",
+      "countyId": 28,
+      "nearTown": false,
+      "mountainArea": false,
+      "positiveReviews": [
+        "Amazing. Best to visit on a sunny clear day for a more picturesque view.",
+        "Very beautifull place, the scenary is amazying. The boat trip was very informing and beautifull.",
+        "Breath taking view. Is a beautiful place. Must be seen at least once in a lifetime."
+      ],
+      "negativeReviews": []
+    },
+    {
+      "id": 8,
+      "name": "Bicaz Gorge",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/B%C3%A9k%C3%A1s-szoros.jpg",
+      "location": "Bicaz-chei",
+      "description": "he gorge was excised by the waters of the river Bicaz and it serves as a passageway between the Romanian provinces of Moldova and Transylvania.",
+      "county": "Neamț",
+      "countyId": 30,
+      "nearTown": false,
+      "mountainArea": true,
+      "positiveReviews": [
+        "One of the iconic roads in Romania.",
+        "Great place to visit. Should be on everyone's next trip agenda!",
+        "Awesome natural place ! Unique !"
+      ],
+      "negativeReviews": ["Crowded! No possibility of easy parking."]
+    },
+    {
+      "id": 9,
+      "name": "Colibita",
+      "image": "https://img.directbooking.ro/getimage.ashx?f=Statiuni&file=Statiune_d34dea8d-5eaa-4cce-a6dd-b0204878b1f2.jpg",
+      "location": "Colibita",
+      "description": "Colibita is an artificial lake built on the site of a former city. The name of the lake comes from the huts, the first houses built by the shepherds who settled in the area several hundred years ago and which, slowly, turned this picturesque place into a prosperous locality and increasingly frequented for its natural beauties.",
+      "county": "Bistrița-Năsăud",
+      "countyId": 6,
+      "nearTown": false,
+      "mountainArea": true,
+      "positiveReviews": [
+        "Amazing place to stay and relax. Is a must visit place!",
+        "A very beautiful place, quiet, and relaxing. Different sports from fishing to hiking can be performed here.",
+        "Beautuful place with a very impressive landscape. The lake is big and the air full of freshness"
+      ],
+      "negativeReviews": [
+        "There are motels EVERYWHERE.",
+        "The location is worth 5 stars, but unfortunately we find the same story as in the whole country .... gorgeous location, unfortunately populated .... Access is difficult, there are very few places to reach the lake. It is chaotic, the owners have raised fences over fences, there are areas where the lake is not even visible from the street."
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Merry Cemetery",
+      "image": "https://www.pensiuneapictorilor.ro/wp-content/uploads/2018/11/maramures-cimitirul-vesel-the-merry-cemetery-of-sapanta-2.jpeg",
+      "location": "Sapanta",
+      "description": "The Merry Cemetery is a cemetery in the village of Săpânța, Maramureş county, Romania. It is famous for its brightly colored tombstones with naïve paintings describing, in an original and poetic manner, the people who are buried there in addition to scenes from their lives",
+      "county": "Maramureș",
+      "countyId": 27,
+      "nearTown": false,
+      "mountainArea": false,
+      "positiveReviews": [
+        "There are actually jokes on the graves, I really wish I could have translated them! Beautiful church interior too! We went twice, the atmosphere at sunset was magical.",
+        "One of the most amazing places in Romania",
+        "Hand craft cemetery! Authentic and funny story written on the monuments! It's must visit on your Romanian list!"
+      ],
+      "negativeReviews": [
+        "I find it rather sad, not cheerful. Beautiful church.",
+        "There is no parking, everyone leaves the car on the road"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Corvin Castle",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Hunedoara_castle.jpg",
+      "location": "Hunedoara",
+      "description": "nitially constructed in the 14th century, with its fourth and final phase of construction being complete in the 19th century, the Corvin Castle, stands as a Gothic-Renaissance masterpiece that was worth waiting for. Today is has stood the test of time and is still standing amongst the largest castles in Europe, in large part thanks to a recent (fancifully) restoration effort after a calamitous fire and decades of neglect.",
+      "county": "Hunedoara",
+      "countyId": 23,
+      "nearTown": true,
+      "mountainArea": false,
+      "positiveReviews": [
+        "Loved it!! Raw beauty with a lot of information.. I could just imagine that the people from that time had such a simple life draped in animal furs to stay warm.. We loved it! The guide in the knights hall was playing on his guitar.",
+        "A real life Hogwarts. The castle is amazing and also the view and nature around it. It is a great feeling to be there surrounded by medieval history. It is also a great spot to take amazing photos around the castle and also in it.",
+        "Another castle to visit in Romania. It is pretty big and also full of history, the view from the castle is amazing."
+      ],
+      "negativeReviews": [
+        "Pretty much no use in visiting inside the castle. It has a really long way to go in restoration procedures.",
+        "Looks nice from the outside, but the inside is an empty maze. Hardly any interesting pieces on display, and barely any information available. Definitely did not live up to the expectations."
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Constanta Casino",
+      "image": "https://www.boredpanda.com/blog/wp-content/uploads/2015/06/Constanta-abandoned-casino__880.jpg",
+      "location": "Constanta",
+      "description": "Once considered Romania's Monte Carlo and a symbol of the city of Constanța, the most-recent and modern version was built in Art Nouveau style, also being the most important Art Nouveau building in the country, designed and built according to the plans of Daniel Renard and inaugurated in August 1910.",
+      "county": "Constanța",
+      "countyId": 15,
+      "nearTown": true,
+      "mountainArea": false,
+      "positiveReviews": [],
+      "negativeReviews": []
+    },
+    {
+      "id": 13,
+      "name": "Palace of Parliament",
+      "image": "https://cdn.theculturetrip.com/images/56-209634-palace-of-parliament.jpg",
+      "location": "Bucharest",
+      "description": "The pinnacle of communist architecture in Romania is the People's Palace (now The Palace of Parliament), built to reflect the prosperity and grandeur of the multilateral society.",
+      "county": "Bucharest",
+      "countyId": 10,
+      "nearTown": true,
+      "mountainArea": false,
+      "positiveReviews": [],
+      "negativeReviews": []
+    },
+    {
+      "id": 14,
+      "name": "Memorial to the Victims of Communism and of the Resistance",
+      "image": "https://live.staticflickr.com/2101/1791826856_1a7bab06b1_b.jpg",
+      "location": "Sighet",
+      "description": "Sighet Prison was one of the most feared places in Romania. It was reserved for political prisoners who were held with no trial and sentenced to harsh punishments. Many died while in custody; families were not informed and death certificates were never issued. It was a cold and cruel place.",
+      "county": "Maramureș",
+      "countyId": 27,
+      "nearTown": true,
+      "mountainArea": false,
+      "positiveReviews": [
+        "A more interactive way of showing history could be done. You have a lot of papers in every room and it takes a lot of time to read every peace of information",
+        "There are not enough words to describe the real life horrors. About the site experience, it lacks interaction. In the 21st century, a virtual guide is a must have, rather then a nice to have. Definetly, a place to see in a lifetime!",
+        "Interesting museum about communism history. It's situated in a old prison"
+      ],
+      "negativeReviews": [
+        "I was shocked by the presentation, I couldn't visit everything, I was already sick when I visited a few cells and read the reports.",
+        "A place that charges you negatively, a lot of pain, fear, broken dreams, buried destinies."
+      ]
+    }
+  ]
+}

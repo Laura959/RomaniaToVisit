@@ -1,0 +1,1 @@
+export const DISPLAY_HIDE_SNACKBAR = "Snackbar: DISPLAY_HIDE_SNACKBAR";

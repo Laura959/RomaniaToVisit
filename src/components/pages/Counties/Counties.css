@@ -1,0 +1,19 @@
+.listContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.listContainer ul {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 2%;
+  border-radius: 10px;
+}
+
+.searchContainer {
+  display: inline-block;
+  margin-top: 3%;
+  margin-left: 2%;
+}

@@ -1,0 +1,40 @@
+h2 {
+  display: none;
+}
+
+.cardContainer {
+  max-width: 600px;
+  margin: 2%;
+}
+
+.cardImage {
+  transition: transform 0.5s ease;
+}
+
+.cardContainer:hover .cardImage {
+  transform: scale(1.5);
+}
+
+.cardContainer:hover h2 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  z-index: 25;
+}
+
+.overlay {
+  background-color: black;
+  opacity: 0.4;
+  width: 600px;
+  height: 600px;
+  display: none;
+}
+
+.cardContainer:hover .overlay {
+  display: block;
+  position: absolute;
+  z-index: 20;
+}
