@@ -1,11 +1,14 @@
 import { useForm } from "react-hook-form";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CardHeader, IconButton } from "@mui/material";
+import { setCountiesArray } from "../../../../actions/countiesActions/countiesActionsCreators";
 import { addNewVisitSpotToArray } from "../../../../actions/visitSpots/actionCreators";
 import { displayOrHideSnackbar } from "../../../../actions/snackbarActions/snackbarActionCreators";
 import CloseIcon from "@mui/icons-material/Close";
 import { RootState } from "../../../../reducers/rootReducer";
-import "./VisitSpotForm.css";
+import "./FormModal.css";
+import { getCountiesDataArray } from "../../../../services/places-to-visit-service";
 
 type FormValues = {
   name: string;
@@ -21,7 +24,8 @@ interface FormProps {
   onClose: () => void;
 }
 
-const VisitSpotForm: React.FC<FormProps> = (props) => {
+const FormModal: React.FC<FormProps> = (props) => {
+  const { onClose } = props;
   const dispatch = useDispatch();
   const visitSpotsArrayState = useSelector(
     (state: RootState) => state.visitSpots.visitSpotsArray
@@ -30,7 +34,16 @@ const VisitSpotForm: React.FC<FormProps> = (props) => {
     (state: RootState) => state.counties.countiesArray
   );
 
-  const { onClose } = props;
+  useEffect(() => {
+    getCounties();
+  }, []);
+
+  const getCounties = async () => {
+    const response = await getCountiesDataArray();
+    const countiesArray = response.data.counties;
+    dispatch(setCountiesArray(countiesArray));
+  };
+
   const {
     register,
     handleSubmit,
@@ -41,7 +54,6 @@ const VisitSpotForm: React.FC<FormProps> = (props) => {
     <form
       className="formContainer"
       onSubmit={handleSubmit((data) => {
-        console.log(data);
         const county = countiesArrayState.filter(
           (county) => county.county === data.county
         );
@@ -131,4 +143,4 @@ const VisitSpotForm: React.FC<FormProps> = (props) => {
   );
 };
 
-export default VisitSpotForm;
+export default FormModal;

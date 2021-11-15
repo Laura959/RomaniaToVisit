@@ -30,6 +30,9 @@ const Header = () => {
             <li>
               <NavLink to="/trip-tool">Trip Tool</NavLink>
             </li>
+            <li>
+              <NavLink to="/traditions">Traditions</NavLink>
+            </li>
             <li onClick={() => dispatch(logout())}>
               <NavLink to="/login">Logout</NavLink>
             </li>

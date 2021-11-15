@@ -1,7 +1,35 @@
+.countyDetailsContainer {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+  flex-direction: column;
+  margin-bottom: 3%;
+}
+
 .countyDetailsTitle {
   color: #575757;
   font-size: 34px;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 0%;
+  margin-bottom: 1%;
   text-transform: uppercase;
+}
+
+.countyDetailsMiddleContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer {
+  padding: 2%;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContainer {
+  padding: 2%;
+  width: 55%;
+  text-align: center;
 }

@@ -1,7 +1,15 @@
+.searchBar {
+  border: 2px solid #ffffff;
+  padding: 2px 4px;
+  display: flex;
+  width: 500px;
+  border-radius: 2px;
+}
+
 .searchBar:hover {
   border: 2px solid #ff9800;
 }
 
-.searchBar {
-  border: 2px solid #ffffff;
+.searchBar button {
+  padding: 10px;
 }

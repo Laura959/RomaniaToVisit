@@ -1,8 +1,9 @@
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { Typography } from "@mui/material";
-import { CountyData } from "../../../../models/models";
+import { CountyData } from "../../../../models/dataModels";
 import { useSelector, useDispatch } from "react-redux";
 import { setVisitSpotsOfSelectedCounties } from "../../../../actions/visitSpots/actionCreators";
+import { setSelectedCountiesArray } from "../../../../actions/countiesActions/countiesActionsCreators";
 import { RootState } from "../../../../reducers/rootReducer";
 
 import "./TripToolTable.css";
@@ -64,13 +65,14 @@ const TripToolTable: React.FC<TableProps> = (props) => {
                 (countyData) => selectedIDs.has(countyData.id)
               );
               getVisitSpotsFromSelectedCounties(selectedRowData);
+              dispatch(setSelectedCountiesArray(selectedRowData));
               onCountySelect(selectedRowData.length);
               onCheckboxSelect();
             }}
           />
         </div>
       ) : (
-        <Typography sx={{ textAlign: "center" }} variant="h5">
+        <Typography className="tableErrorMessage" variant="h5">
           Counties data was not received!
         </Typography>
       )}

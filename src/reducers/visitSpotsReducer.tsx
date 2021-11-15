@@ -4,7 +4,7 @@ import {
   SET_VISIT_SPOTS_OF_SELECTED_COUNTIES,
   ADD_NEW_VISIT_SPOT,
 } from "../actions/visitSpots/actions";
-import { PlaceToVisitObject } from "../models/models";
+import { PlaceToVisitObject } from "../models/dataModels";
 
 export interface VisitSpotsState {
   visitSpotsArray: PlaceToVisitObject[];

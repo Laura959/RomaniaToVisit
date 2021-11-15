@@ -1,0 +1,11 @@
+.popupTitle {
+  text-align: center;
+  font-size: 14px;
+  color: #e65100;
+  padding: 1%;
+}
+
+.markerCardContainer {
+  display: flex;
+  justify-content: center;
+}

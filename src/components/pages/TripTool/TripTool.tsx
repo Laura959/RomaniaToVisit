@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Button } from "@mui/material";
+import Map from "../../shared/Map/Map";
+import LoadingSpinner from "../../shared/LoadingSpinner/LoadingSpinner";
+import AddButton from "../../shared/AddCreateButton/AddButton";
 import TripToolTable from "./TripToolTable/TripToolTable";
 import TripToolCard from "./TripToolCard/TripToolCard";
 import { getCountiesDataArray } from "../../../services/places-to-visit-service";
@@ -11,14 +13,22 @@ import "./TripTool.css";
 
 const TripTool = () => {
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [isTripToolCardVisible, setIsTripToolCardVisible] = useState(false);
   const visitSpotsOfSelectedCountiesArrayState = useSelector(
     (state: RootState) => state.visitSpots.visitSpotsOfCountiesArray
   );
+  const selectedCountiesArrayState = useSelector(
+    (state: RootState) => state.counties.selectedCountiesArray
+  );
 
   const toggleButton = (count: number) => {
-    setIsButtonDisabled(false);
+    if (count > 0) {
+      setIsButtonDisabled(false);
+    } else {
+      setIsButtonDisabled(true);
+    }
   };
 
   useEffect(() => {
@@ -26,22 +36,25 @@ const TripTool = () => {
   }, []);
 
   const getCounties = async () => {
+    setIsLoading(true);
     const response = await getCountiesDataArray();
     const countiesArray = response.data.counties;
     dispatch(setCountiesArray(countiesArray));
+    setIsLoading(false);
+  };
+
+  const createTrip = () => {
+    setIsTripToolCardVisible(true);
   };
 
   return (
     <>
       <div className="tripTool">
-        <Button
-          variant="contained"
-          size="large"
+        <AddButton
+          title="Create trip"
+          onAddCreate={createTrip}
           disabled={isButtonDisabled}
-          onClick={() => setIsTripToolCardVisible(true)}
-        >
-          Create trip
-        </Button>
+        />
         {isTripToolCardVisible &&
           visitSpotsOfSelectedCountiesArrayState.length === 0 && (
             <p className="noSpotsMessage">
@@ -49,14 +62,18 @@ const TripTool = () => {
             </p>
           )}
       </div>
-      <div className="tableContainer">
-        <TripToolTable
-          onCountySelect={toggleButton}
-          onCheckboxSelect={() => {
-            setIsTripToolCardVisible(false);
-          }}
-        />
-      </div>
+      {!isLoading ? (
+        <div className="tableContainer">
+          <TripToolTable
+            onCountySelect={toggleButton}
+            onCheckboxSelect={() => {
+              setIsTripToolCardVisible(false);
+            }}
+          />
+        </div>
+      ) : (
+        <LoadingSpinner />
+      )}
       <div>
         {isTripToolCardVisible &&
           visitSpotsOfSelectedCountiesArrayState.length !== 0 && (
@@ -66,6 +83,7 @@ const TripTool = () => {
             />
           )}
       </div>
+      <Map countiesData={selectedCountiesArrayState} />
     </>
   );
 };

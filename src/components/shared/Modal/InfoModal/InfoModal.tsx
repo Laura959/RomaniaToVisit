@@ -11,18 +11,23 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import DisabledByDefaultIcon from "@mui/icons-material/DisabledByDefault";
-import { PlaceToVisitObject } from "../../../../models/models";
-
-import "./VisitSpotsDialog.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { ModalPlaceToVisit } from "../../../../models/dataModels";
+import { RootState } from "../../../../reducers/rootReducer";
+
+import "./InfoModal.css";
 
 interface DialogProps {
-  data: PlaceToVisitObject;
   onClose: () => void;
 }
 
 const VisitSpotsDialog: React.FC<DialogProps> = (props) => {
-  const { data, onClose } = props;
+  const { onClose } = props;
+  const dataState = useSelector(
+    (state: RootState) => state.modals.modalData
+  ) as ModalPlaceToVisit;
+  const data = dataState.visitSpot;
 
   return (
     <Card className="dialogCard">
@@ -36,7 +41,7 @@ const VisitSpotsDialog: React.FC<DialogProps> = (props) => {
       />
       <CardMedia
         component="img"
-        alt="green iguana"
+        alt="romania visit spot"
         height="280"
         image={data.image}
       />

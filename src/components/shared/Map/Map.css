@@ -1,0 +1,9 @@
+.leaflet-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.leaflet-popup-content-wrapper {
+  min-width: 200px;
+  height: 160px;
+}

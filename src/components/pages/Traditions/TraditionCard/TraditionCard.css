@@ -1,0 +1,49 @@
+.traditionDialogCard {
+  box-sizing: border-box;
+  width: 600px;
+  min-width: 550px;
+  max-width: 600px;
+  min-height: 600px;
+  margin: 2%;
+  display: inline-block;
+}
+
+.traditionCardContent {
+  margin-top: 2%;
+  text-align: justify;
+}
+
+.traditionCardContent p {
+  min-height: 120px;
+}
+
+.traditionsContentDiv {
+  width: 100%;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 80px;
+  margin-top: 2%;
+}
+
+.traditionsContentMidDiv {
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.traditionsContentInnerDiv {
+  width: 50%;
+  text-align: center;
+}
+
+.traditionsContentInnerDiv span {
+  color: #2e7d32;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}

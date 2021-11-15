@@ -2,6 +2,10 @@ export interface PlacesArray {
   [places: string]: PlaceToVisitObject[];
 }
 
+export interface ModalPlaceToVisit {
+  [visitSpot: string]: PlaceToVisitObject;
+}
+
 export interface PlaceToVisitObject {
   id: number;
   name: string;
@@ -25,6 +29,20 @@ export interface CountyData {
   county: string;
   population: number;
   size: number;
+  location: number[];
   code: string;
   region: string;
+}
+
+export interface TraditionsDataArray {
+  [traditions: string]: TraditionData[];
+}
+
+export interface TraditionData {
+  id: number;
+  title: string;
+  image: string;
+  location: string;
+  origin: string;
+  description: string;
 }

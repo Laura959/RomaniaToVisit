@@ -1,0 +1,9 @@
+.traditionCardsContainer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  margin-left: 5%;
+}

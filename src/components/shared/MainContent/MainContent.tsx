@@ -4,6 +4,7 @@ import Welcome from "../../pages/Welcome/Welcome";
 import VisitSpots from "../../pages/VisitSpots/VisitSpots";
 import Counties from "../../pages/Counties/Counties";
 import TripTool from "../../pages/TripTool/TripTool";
+import Traditions from "../../pages/Traditions/Traditions";
 import Login from "../../pages/Login/Login";
 import CountyDetails from "../../pages/Counties/CountyDetails/CountyDetails";
 import { useSelector } from "react-redux";
@@ -45,6 +46,11 @@ const MainContent = () => {
       {isAuthenticated && (
         <Route path="/trip-tool">
           <TripTool />
+        </Route>
+      )}
+      {isAuthenticated && (
+        <Route path="/traditions">
+          <Traditions />
         </Route>
       )}
       <Route path="/*">

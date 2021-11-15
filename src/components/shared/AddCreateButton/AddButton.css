@@ -1,0 +1,8 @@
+.addButtonContainer button {
+  margin-left: 8rem;
+  background-color: #e65100;
+}
+
+.addButtonContainer button:hover {
+  background-color: #c94803;
+}

@@ -3,40 +3,26 @@ import SearchIcon from "@mui/icons-material/Search";
 import IconButton from "@mui/material/IconButton";
 
 import "./SearchBar.css";
-import { useState } from "react";
 
 interface SearchBarProps {
   onSearchSubmit: (value: string) => void;
 }
 
 const SearchBar: React.FC<SearchBarProps> = (props) => {
-  const [inputValue, setInputValue] = useState("");
   const { onSearchSubmit } = props;
 
   const searchCounties = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSearchSubmit(inputValue);
   };
   return (
-    <Paper
-      component="form"
-      onSubmit={searchCounties}
-      sx={{
-        p: "2px 4px",
-        display: "flex",
-        alignItems: "center",
-        width: 400,
-        borderRadius: 2,
-      }}
-      className="searchBar"
-    >
+    <Paper component="form" onSubmit={searchCounties} className="searchBar">
       <InputBase
-        sx={{ ml: 1, flex: 1 }}
+        sx={{ ml: 1, flex: 1, height: "50px" }}
         placeholder="Search County"
         inputProps={{ "aria-label": "search counties" }}
-        onChange={(e) => setInputValue(e.target.value)}
+        onChange={(e) => onSearchSubmit(e.target.value)}
       />
-      <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
+      <IconButton type="submit" aria-label="search">
         <SearchIcon />
       </IconButton>
     </Paper>

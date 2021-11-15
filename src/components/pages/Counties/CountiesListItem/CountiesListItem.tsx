@@ -1,4 +1,4 @@
-import { ListItem, IconButton } from "@mui/material";
+import { ListItem, IconButton, Divider } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -21,12 +21,16 @@ const CountiesListItem: React.FC<CountyProps> = (props) => {
         onMouseLeave={() => setIsArrowVisible(false)}
         className="listItem"
         secondaryAction={
-          <IconButton edge="end" aria-label="delete">
-            {isArrowVisible && <ArrowForwardIcon className="icon" />}
-          </IconButton>
+          <div className="countyItemBtnDivider">
+            <IconButton edge="end" aria-label="delete">
+              {isArrowVisible && <ArrowForwardIcon className="icon" />}
+            </IconButton>
+          </div>
         }
       >
-        <div className="itemContent">{name}</div>
+        <div className="countyItemDivider">
+          <div className="itemContent">{name}</div>
+        </div>
       </ListItem>
     </Link>
   );

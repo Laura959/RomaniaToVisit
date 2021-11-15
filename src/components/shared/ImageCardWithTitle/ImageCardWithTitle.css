@@ -29,6 +29,7 @@ h2 {
   background-color: black;
   opacity: 0.4;
   width: 600px;
+  min-width: 600px;
   height: 600px;
   display: none;
 }

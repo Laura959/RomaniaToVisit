@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import { Grid } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { getCountiesDataArray } from "../../../../services/places-to-visit-service";
 import { setCountiesArray } from "../../../../actions/countiesActions/countiesActionsCreators";
@@ -33,17 +32,17 @@ const CountyDetails = () => {
   };
 
   return (
-    <Grid container m="auto" width="80%" justifyContent="center">
+    <div className="countyDetailsContainer">
       <h1 className="countyDetailsTitle">{selectedCounty[0].county}</h1>
-      <Grid container item spacing={2} justifyContent="center">
-        <Grid item xs={5} p="2%">
+      <div className="countyDetailsMiddleContainer">
+        <div className="imageContainer">
           <img
             width="100%"
             src="https://lp-cms-production.imgix.net/2019-06/67a671f261d363136a282f23b98d7253-piata-sfatului.jpg"
             alt="Brasov"
           />
-        </Grid>
-        <Grid item xs={7} textAlign="center" p="2%">
+        </div>
+        <div className="textContainer">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quae
             amet et omnis, unde reiciendis blanditiis similique sunt enim
@@ -66,10 +65,10 @@ const CountyDetails = () => {
             quisquam sit, eaque qui tenetur fugiat consectetur dolor laboriosam
             culpa repellendus id cum. Provident.
           </p>
-        </Grid>
-      </Grid>
-      <Grid container item justifyContent="center" spacing={2} mt="1%">
-        <Grid item xs={7} p="2%" textAlign="center">
+        </div>
+      </div>
+      <div className="countyDetailsMiddleContainer">
+        <div className="textContainer">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ipsam
           ea porro perspiciatis harum libero a quas rerum explicabo dolor? Lorem
           ipsum dolor sit amet, consectetur adipisicing elit. Et deleniti enim
@@ -84,16 +83,16 @@ const CountyDetails = () => {
           veritatis incidunt perspiciatis doloremque dicta animi, aliquam nobis
           rerum commodi impedit. Voluptatem accusantium dolores ipsa provident
           assumenda est sunt veniam amet.
-        </Grid>
-        <Grid item xs={5} p="2%">
+        </div>
+        <div className="imageContainer">
           <img
             width="100%"
             src="https://content.r9cdn.net/rimg/dimg/8e/20/6b3f5053-city-17704-16d62653abf.jpg?width=1750&height=1000&xhint=1561&yhint=1296&crop=true"
             alt="brasov"
           />
-        </Grid>
-      </Grid>
-    </Grid>
+        </div>
+      </div>
+    </div>
   );
 };
 

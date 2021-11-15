@@ -1,27 +1,44 @@
 .listItem {
   margin-top: 1.5%;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 5px;
   -webkit-box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.17);
   box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.17);
   cursor: pointer;
+  padding: 0;
+  transition: all 0.1s ease-in-out;
 }
 
 .listItem:hover {
-  background-color: #ff99002a;
-}
-
-.listItem:hover .itemContent {
-  color: #e65100;
+  transform: scale(1.04);
 }
 
 .itemContent {
-  padding: 1%;
   font-size: 20px;
 }
 
+.countyItemDivider {
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bdbdbd28;
+  padding: 0.5rem 1rem;
+}
+
+.listItem:hover .countyItemBtnDivider {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bdbdbd28;
+  padding: 0.5rem 1rem;
+  margin-left: 20%;
+}
+
 .icon {
-  color: #ff9800;
   animation-duration: 0.5s;
   animation-name: slidein;
 }

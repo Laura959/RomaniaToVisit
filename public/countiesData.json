@@ -5,6 +5,7 @@
       "county": "Alba",
       "population": 342.376,
       "size": 6.25,
+      "location": [46.1333, 23.5333],
       "code": "AB",
       "region": "Center"
     },
@@ -13,6 +14,7 @@
       "county": "Arad",
       "population": 430.629,
       "size": 7.746,
+      "location": [46.18333, 21.31667],
       "code": "AR",
       "region": "West"
     },
@@ -21,6 +23,7 @@
       "county": "Argeș",
       "population": 612.431,
       "size": 6.822,
+      "location": [45.13422, 24.67409],
       "code": "AG",
       "region": "South-Muntenia"
     },
@@ -29,6 +32,7 @@
       "county": "Bacău",
       "population": 616.168,
       "size": 6.622,
+      "location": [46.568825, 26.916025],
       "code": "BC",
       "region": "North-East"
     },
@@ -37,6 +41,7 @@
       "county": "Bihor",
       "population": 575.398,
       "size": 7.539,
+      "location": [47.0722, 21.9211],
       "code": "BH",
       "region": "North-West"
     },
@@ -45,6 +50,7 @@
       "county": "Bistrița-Năsăud",
       "population": 286.225,
       "size": 5.358,
+      "location": [47.1389, 24.5003],
       "code": "BN",
       "region": "North-West"
     },
@@ -53,6 +59,7 @@
       "county": "Botoșani",
       "population": 412.626,
       "size": 4.987,
+      "location": [47.75, 26.66667],
       "code": "BT",
       "region": "North-East"
     },
@@ -61,6 +68,7 @@
       "county": "Brașov",
       "population": 549.217,
       "size": 5.361,
+      "location": [45.657974, 25.601198],
       "code": "BV",
       "region": "Center"
     },
@@ -69,6 +77,7 @@
       "county": "Brăila",
       "population": 321.212,
       "size": 4.766,
+      "location": [45.265246, 27.959471],
       "code": "BR",
       "region": "South-East"
     },
@@ -77,6 +86,7 @@
       "county": "Bucharest",
       "population": 1.883425,
       "size": 240,
+      "location": [44.426767, 26.102538],
       "code": "B",
       "region": "Bucharest-Ilfov"
     },
@@ -85,6 +95,7 @@
       "county": "Buzău",
       "population": 451.069,
       "size": 6.101,
+      "location": [45.15, 26.83333],
       "code": "BZ",
       "region": "South-East"
     },
@@ -93,6 +104,7 @@
       "county": "Caraș-Severin",
       "population": 295.579,
       "size": 8.532,
+      "location": [45.1139646, 22.0740993],
       "code": "CS",
       "region": "West"
     },
@@ -101,6 +113,7 @@
       "county": "Călărași",
       "population": 306.691,
       "size": 5.087,
+      "location": [44.2051, 27.31356],
       "code": "CL",
       "region": "South-Muntenia"
     },
@@ -109,6 +122,7 @@
       "county": "Cluj",
       "population": 691.106,
       "size": 6.672,
+      "location": [46.775, 23.5917],
       "code": "CJ",
       "region": "North-West"
     },
@@ -117,6 +131,7 @@
       "county": "Constanța",
       "population": 684.082,
       "size": 7.104,
+      "location": [44.179249, 28.64994],
       "code": "CT",
       "region": "South-East"
     },
@@ -125,6 +140,7 @@
       "county": "Covasna",
       "population": 210.177,
       "size": 3.707,
+      "location": [45.85, 26.18333],
       "code": "CV",
       "region": "Center"
     },
@@ -133,6 +149,7 @@
       "county": "Dâmbovița",
       "population": 518.745,
       "size": 4.056,
+      "location": [44.78333, 25.86667],
       "code": "DB",
       "region": "South-Muntenia"
     },
@@ -141,6 +158,7 @@
       "county": "Dolj",
       "population": 660.544,
       "size": 7.425,
+      "location": [44.319305, 23.800678],
       "code": "DJ",
       "region": "South-West Oltenia"
     },
@@ -149,6 +167,7 @@
       "county": "Galați",
       "population": 536.167,
       "size": 4.465,
+      "location": [45.45, 28.05],
       "code": "GL",
       "region": "South-East"
     },
@@ -157,6 +176,7 @@
       "county": "Giurgiu",
       "population": 281.422,
       "size": 3.544,
+      "location": [43.88333, 25.96667],
       "code": "GR",
       "region": "South-Muntenia"
     },
@@ -165,6 +185,7 @@
       "county": "Gorj",
       "population": 341.594,
       "size": 5.572,
+      "location": [44.61667, 23.43333],
       "code": "GJ",
       "region": "South-West Oltenia"
     },
@@ -173,6 +194,7 @@
       "county": "Harghita",
       "population": 310.867,
       "size": 6.637,
+      "location": [46.36, 25.8],
       "code": "HR",
       "region": "Center"
     },
@@ -181,6 +203,7 @@
       "county": "Hunedoara",
       "population": 418.565,
       "size": 7.072,
+      "location": [45.75, 22.9],
       "code": "HD",
       "region": "West"
     },
@@ -189,6 +212,7 @@
       "county": "Ialomița",
       "population": 274.148,
       "size": 4.455,
+      "location": [44.7635, 27.34337],
       "code": "IL",
       "region": "South-Muntenia"
     },
@@ -197,6 +221,7 @@
       "county": "Iași",
       "population": 772.348,
       "size": 5.477,
+      "location": [47.158455, 27.601442],
       "code": "IS",
       "region": "North-East"
     },
@@ -205,6 +230,7 @@
       "county": "Ilfov",
       "population": 388.738,
       "size": 1.564,
+      "location": [44.535548, 26.232489],
       "code": "IF",
       "region": "Bucharest-Ilfov"
     },
@@ -213,6 +239,7 @@
       "county": "Maramureș",
       "population": 478.659,
       "size": 6.303,
+      "location": [47.670330652, 24.002999988],
       "code": "MM",
       "region": "North-West"
     },
@@ -221,6 +248,7 @@
       "county": "Mehedinți",
       "population": 265.39,
       "size": 4.942,
+      "location": [44.61417, 22.70722],
       "code": "MH",
       "region": "South-West Oltenia"
     },
@@ -229,6 +257,7 @@
       "county": "Mureș",
       "population": 550.846,
       "size": 6.705,
+      "location": [46.54245, 24.55747],
       "code": "MS",
       "region": "Center"
     },
@@ -237,6 +266,7 @@
       "county": "Neamț",
       "population": 470.766,
       "size": 5.897,
+      "location": [46.91667, 26.33333],
       "code": "NT",
       "region": "North-East"
     },
@@ -245,6 +275,7 @@
       "county": "Olt",
       "population": 436.4,
       "size": 5.503,
+      "location": [44.4333, 24.3667],
       "code": "OT",
       "region": "South-West Oltenia"
     },
@@ -253,6 +284,7 @@
       "county": "Prahova",
       "population": 762.886,
       "size": 4.715,
+      "location": [44.88333, 26.05],
       "code": "PH",
       "region": "South-Muntenia"
     },
@@ -261,6 +293,7 @@
       "county": "Satu Mare",
       "population": 344.36,
       "size": 4.42,
+      "location": [47.8, 22.88333],
       "code": "SM",
       "region": "North-West"
     },
@@ -269,6 +302,7 @@
       "county": "Sălaj",
       "population": 224.384,
       "size": 3.867,
+      "location": [47.2, 23.05],
       "code": "SJ",
       "region": "North-West"
     },
@@ -277,6 +311,7 @@
       "county": "Sibiu",
       "population": 397.322,
       "size": 5.432,
+      "location": [45.8, 24.15],
       "code": "SB",
       "region": "Center"
     },
@@ -285,6 +320,7 @@
       "county": "Suceava",
       "population": 634.81,
       "size": 8.553,
+      "location": [47.63333, 26.25],
       "code": "SV",
       "region": "North-East"
     },
@@ -293,6 +329,7 @@
       "county": "Teleorman",
       "population": 380.123,
       "size": 5.788,
+      "location": [43.65416405, 25.35416525],
       "code": "TR",
       "region": "South-Muntenia"
     },
@@ -301,6 +338,7 @@
       "county": "Timiș",
       "population": 683.54,
       "size": 8.692,
+      "location": [45.75372, 21.22571],
       "code": "TM",
       "region": "West"
     },
@@ -309,6 +347,7 @@
       "county": "Tulcea",
       "population": 213.083,
       "size": 8.484,
+      "location": [45.16667, 28.8],
       "code": "TL",
       "region": "South-East"
     },
@@ -317,6 +356,7 @@
       "county": "Vaslui",
       "population": 395.499,
       "size": 5.317,
+      "location": [46.63333, 27.73333],
       "code": "VS",
       "region": "North-East"
     },
@@ -325,6 +365,7 @@
       "county": "Vâlcea",
       "population": 371.714,
       "size": 5.764,
+      "location": [45.1, 24.36667],
       "code": "VL",
       "region": "South-West Oltenia"
     },
@@ -333,6 +374,7 @@
       "county": "Vrancea",
       "population": 340.31,
       "size": 4.854,
+      "location": [45.85, 26.73333],
       "code": "VN",
       "region": "South-East"
     }

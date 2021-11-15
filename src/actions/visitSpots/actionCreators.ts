@@ -1,4 +1,4 @@
-import { PlaceToVisitObject } from "../../models/models";
+import { PlaceToVisitObject } from "../../models/dataModels";
 import {
   SET_VISIT_SPOTS,
   SET_VISIT_SPOTS_OF_SELECTED_COUNTIES,

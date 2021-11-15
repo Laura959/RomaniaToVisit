@@ -5,7 +5,7 @@ import {
   Divider,
   IconButton,
 } from "@mui/material";
-import { PlaceToVisitObject } from "../../../../models/models";
+import { PlaceToVisitObject } from "../../../../models/dataModels";
 import CloseIcon from "@mui/icons-material/Close";
 
 import "./TripToolCard.css";

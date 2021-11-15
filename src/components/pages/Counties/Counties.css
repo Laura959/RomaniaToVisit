@@ -5,15 +5,21 @@
   flex-direction: column;
 }
 
+.listContainer p {
+  color: #e65100;
+}
+
 .listContainer ul {
-  width: 100%;
-  max-width: 800px;
+  width: 83%;
   margin-top: 2%;
   border-radius: 10px;
 }
 
+.listContainer li {
+  padding: 0;
+}
+
 .searchContainer {
   display: inline-block;
-  margin-top: 3%;
-  margin-left: 2%;
+  margin-left: 8.5%;
 }

@@ -12,7 +12,12 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-const SnackbarMessage = () => {
+interface SnackBarProps {
+  text: string;
+}
+
+const SnackbarMessage: React.FC<SnackBarProps> = (props) => {
+  const { text } = props;
   const dispatch = useDispatch();
   const isSnackBarOpen = useSelector(
     (state: RootState) => state.snackbar.isSnackbarVisible
@@ -29,7 +34,7 @@ const SnackbarMessage = () => {
       onClose={closeSnackbar}
     >
       <Alert onClose={closeSnackbar} severity="success" sx={{ width: "100%" }}>
-        Your visit spot was successfully created!
+        {text}
       </Alert>
     </Snackbar>
   );

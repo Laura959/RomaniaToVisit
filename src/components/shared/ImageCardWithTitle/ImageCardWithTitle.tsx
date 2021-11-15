@@ -1,7 +1,7 @@
 import { Card, CardActionArea, CardMedia, Typography } from "@mui/material";
-import { PlaceToVisitObject } from "../../../../models/models";
+import { PlaceToVisitObject } from "../../../models/dataModels";
 
-import "./VisitSpotCard.css";
+import "./ImageCardWithTitle.css";
 
 interface CardProps {
   visitSpotData: PlaceToVisitObject;
