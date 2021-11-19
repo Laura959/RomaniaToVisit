@@ -1,20 +1,19 @@
 import { useEffect, useState } from "react";
 import LoadingSpinner from "../../shared/LoadingSpinner/LoadingSpinner";
-import Modal from "../../shared/Modal/Modal";
+import useModal from "../../../hooks/useModal";
 import AddButton from "../../shared/AddCreateButton/AddButton";
 import TraditionCard from "./TraditionCard/TraditionCard";
-import Snackbar from "../../shared/Snackbar/Snackbar";
 import { useDispatch, useSelector } from "react-redux";
 import { setTraditionsArray } from "../../../actions/traditionActions/traditionActionCreators";
-import { openModal } from "../../../actions/modalActions/modalActionCreators";
 import { getTraditionsDataArray } from "../../../services/places-to-visit-service";
 import { TraditionData } from "../../../models/dataModels";
 import { RootState } from "../../../reducers/rootReducer";
 import "./Traditions.css";
 
 const Traditions = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
+  const { openModalHandler } = useModal();
   const traditionsArrayState = useSelector(
     (state: RootState) => state.traditions.traditionsArray
   );
@@ -53,13 +52,11 @@ const Traditions = () => {
         <AddButton
           title="Add Tradition"
           onAddCreate={() => {
-            dispatch(openModal({ modalType: "TRADITIONFORM" }));
+            openModalHandler("TRADITIONFORM");
           }}
         />
       )}
-      <Snackbar text="Tradition was successfully added!" />
       {!isLoading ? renderTraditionsOrMessage() : <LoadingSpinner />}
-      <Modal />
     </>
   );
 };

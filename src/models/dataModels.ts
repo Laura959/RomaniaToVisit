@@ -29,7 +29,7 @@ export interface CountyData {
   county: string;
   population: number;
   size: number;
-  location: number[];
+  coordinates: number[];
   code: string;
   region: string;
 }

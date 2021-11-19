@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { CardHeader, IconButton } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { addNewTradition } from "../../../../actions/traditionActions/traditionActionCreators";
-import { displayOrHideSnackbar } from "../../../../actions/snackbarActions/snackbarActionCreators";
+import useSnackbar from "../../../../hooks/useSnackbar";
 import CloseIcon from "@mui/icons-material/Close";
 import "../FormModal/FormModal.css";
 
@@ -17,12 +17,13 @@ type FormValues = {
 };
 
 interface FormProps {
-  onClose: () => void;
+  onTraditionFormClose: () => void;
 }
 
 const FormModalTradition: React.FC<FormProps> = (props) => {
+  const { openSnackbarHandler } = useSnackbar();
   const dispatch = useDispatch();
-  const { onClose } = props;
+  const { onTraditionFormClose } = props;
 
   const {
     register,
@@ -44,13 +45,13 @@ const FormModalTradition: React.FC<FormProps> = (props) => {
           description: data.description,
         };
         dispatch(addNewTradition(newTradition));
-        dispatch(displayOrHideSnackbar(true));
-        onClose();
+        openSnackbarHandler("New Tradition Was Successfully Added!");
+        onTraditionFormClose();
       })}
     >
       <CardHeader
         action={
-          <IconButton aria-label="settings" onClick={onClose}>
+          <IconButton aria-label="settings" onClick={onTraditionFormClose}>
             <CloseIcon />
           </IconButton>
         }

@@ -6,14 +6,13 @@ import AddButton from "../../shared/AddCreateButton/AddButton";
 import { getPlacesToVisitArray } from "../../../services/places-to-visit-service";
 import { setVisitSpots } from "../../..//actions/visitSpots/actionCreators";
 import { useSelector, useDispatch } from "react-redux";
-import Snackbar from "../../shared/Snackbar/Snackbar";
-import { openModal } from "../../../actions/modalActions/modalActionCreators";
+import useModal from "../../../hooks/useModal";
 import "./VisitSpots.css";
 import { RootState } from "../../../reducers/rootReducer";
-import Modal from "../../shared/Modal/Modal";
 
 const VisitSpots = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { openModalHandler } = useModal();
   const dispatch = useDispatch();
   const visitSpotsArrayState = useSelector(
     (state: RootState) => state.visitSpots.visitSpotsArray
@@ -41,8 +40,9 @@ const VisitSpots = () => {
             <VisitSpotsCard
               key={visitSpot.id}
               visitSpotData={visitSpot}
+              cardHeight="600"
               onCardClick={() => {
-                dispatch(openModal({ modalType: "INFO", data: { visitSpot } }));
+                openModalHandler("INFO", { visitSpot });
               }}
             />
           ))}
@@ -54,19 +54,17 @@ const VisitSpots = () => {
 
   return (
     <div>
-      <Snackbar text="Your visit spot was successfully created!" />
       <div className="buttonContainer">
         {isUserAdmin && (
           <AddButton
             title="Create New Visit Spot"
             onAddCreate={() => {
-              dispatch(openModal({ modalType: "FORM" }));
+              openModalHandler("FORM");
             }}
           />
         )}
       </div>
       {!isLoading ? renderVisitSpotssOrMessage() : <LoadingSpinner />}
-      <Modal />
     </div>
   );
 };

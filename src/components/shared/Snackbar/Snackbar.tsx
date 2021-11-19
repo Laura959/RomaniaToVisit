@@ -1,9 +1,10 @@
 import { forwardRef } from "react";
 import { Snackbar } from "@mui/material";
-import { useSelector, useDispatch } from "react-redux";
-import { displayOrHideSnackbar } from "../../../actions/snackbarActions/snackbarActionCreators";
+import { useSelector } from "react-redux";
 import { RootState } from "../../../reducers/rootReducer";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
+import useSnackbar from "../../../hooks/useSnackbar";
+import ReactDOM from "react-dom";
 
 const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,
@@ -12,31 +13,38 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-interface SnackBarProps {
-  text: string;
-}
-
-const SnackbarMessage: React.FC<SnackBarProps> = (props) => {
-  const { text } = props;
-  const dispatch = useDispatch();
+const SnackbarMessage = () => {
+  const { closeSnackbarHandler } = useSnackbar();
   const isSnackBarOpen = useSelector(
     (state: RootState) => state.snackbar.isSnackbarVisible
   );
+  const snackBarText = useSelector(
+    (state: RootState) => state.snackbar.snackbarText
+  );
 
-  const closeSnackbar = () => {
-    dispatch(displayOrHideSnackbar(false));
+  const handleClose = () => {
+    closeSnackbarHandler();
   };
 
   return (
-    <Snackbar
-      open={isSnackBarOpen}
-      autoHideDuration={4000}
-      onClose={closeSnackbar}
-    >
-      <Alert onClose={closeSnackbar} severity="success" sx={{ width: "100%" }}>
-        {text}
-      </Alert>
-    </Snackbar>
+    <>
+      {ReactDOM.createPortal(
+        <Snackbar
+          open={isSnackBarOpen}
+          autoHideDuration={4000}
+          onClose={handleClose}
+        >
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            sx={{ width: "100%" }}
+          >
+            {snackBarText}
+          </Alert>
+        </Snackbar>,
+        document.getElementById("snackbar-root")!
+      )}
+    </>
   );
 };
 

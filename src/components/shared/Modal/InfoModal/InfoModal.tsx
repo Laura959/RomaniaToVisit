@@ -19,11 +19,11 @@ import { RootState } from "../../../../reducers/rootReducer";
 import "./InfoModal.css";
 
 interface DialogProps {
-  onClose: () => void;
+  onInfoModalClose: () => void;
 }
 
 const VisitSpotsDialog: React.FC<DialogProps> = (props) => {
-  const { onClose } = props;
+  const { onInfoModalClose } = props;
   const dataState = useSelector(
     (state: RootState) => state.modals.modalData
   ) as ModalPlaceToVisit;
@@ -33,7 +33,7 @@ const VisitSpotsDialog: React.FC<DialogProps> = (props) => {
     <Card className="dialogCard">
       <CardHeader
         action={
-          <IconButton aria-label="close" onClick={onClose}>
+          <IconButton aria-label="close" onClick={onInfoModalClose}>
             <CloseIcon />
           </IconButton>
         }
@@ -51,7 +51,7 @@ const VisitSpotsDialog: React.FC<DialogProps> = (props) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" className="button">
+        <Button size="small" className="button" onClick={onInfoModalClose}>
           <Link className="buttonContent" to={`/counties/${data.countyId}`}>
             <div>
               Location: <span className="locationInfo">{data.location}</span>

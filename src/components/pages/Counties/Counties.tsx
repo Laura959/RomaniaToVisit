@@ -11,7 +11,7 @@ import SearchBar from "../../shared/SearchBar/SearchBar";
 import "./Counties.css";
 
 const Counties = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
   const [searchValue, setSearchValue] = useState("");
   const countiesArrayState = useSelector(

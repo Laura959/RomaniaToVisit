@@ -1,4 +1,4 @@
-import MarkerCardVisitSpot from "../MarkerCardVisitSpot/MarkerCardVisitSpot";
+import ImageCardWithTitle from "../../ImageCardWithTitle/ImageCardWithTitle";
 import { PlaceToVisitObject } from "../../../../models/dataModels";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../reducers/rootReducer";
@@ -22,7 +22,12 @@ const MapMarkerCard: React.FC<MapMarkerProps> = (props) => {
       <div className="popupTitle">Visit Spots in {county}:</div>
       <div className="markerCardContainer">
         {visitSpotsInCounty.map((visitSpot: PlaceToVisitObject) => (
-          <MarkerCardVisitSpot key={visitSpot.id} visitSpotdata={visitSpot} />
+          <ImageCardWithTitle
+            key={visitSpot.id}
+            visitSpotData={visitSpot}
+            cardHeight="90"
+            className="mapCardContainer"
+          />
         ))}
       </div>
     </>

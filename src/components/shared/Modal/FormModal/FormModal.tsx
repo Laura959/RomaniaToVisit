@@ -1,14 +1,17 @@
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CardHeader, IconButton } from "@mui/material";
 import { setCountiesArray } from "../../../../actions/countiesActions/countiesActionsCreators";
 import { addNewVisitSpotToArray } from "../../../../actions/visitSpots/actionCreators";
-import { displayOrHideSnackbar } from "../../../../actions/snackbarActions/snackbarActionCreators";
 import CloseIcon from "@mui/icons-material/Close";
+import useSnackbar from "../../../../hooks/useSnackbar";
 import { RootState } from "../../../../reducers/rootReducer";
-import "./FormModal.css";
+import FormSelectInput from "./FormSelectInput/FormSelectInput";
+import { CountyData } from "../../../../models/dataModels";
 import { getCountiesDataArray } from "../../../../services/places-to-visit-service";
+
+import "./FormModal.css";
 
 type FormValues = {
   name: string;
@@ -21,18 +24,22 @@ type FormValues = {
 };
 
 interface FormProps {
-  onClose: () => void;
+  onFormModalClose: () => void;
 }
 
 const FormModal: React.FC<FormProps> = (props) => {
-  const { onClose } = props;
+  const { onFormModalClose } = props;
+  const [countyDetails, setCountyDetails] = useState<CountyData | null>(null);
+  const [submitted, setSubmitted] = useState(false);
+  const { openSnackbarHandler } = useSnackbar();
   const dispatch = useDispatch();
   const visitSpotsArrayState = useSelector(
     (state: RootState) => state.visitSpots.visitSpotsArray
   );
-  const countiesArrayState = useSelector(
-    (state: RootState) => state.counties.countiesArray
-  );
+
+  const setCountyValue = (countyDetails: CountyData) => {
+    setCountyDetails(countyDetails);
+  };
 
   useEffect(() => {
     getCounties();
@@ -54,30 +61,30 @@ const FormModal: React.FC<FormProps> = (props) => {
     <form
       className="formContainer"
       onSubmit={handleSubmit((data) => {
-        const county = countiesArrayState.filter(
-          (county) => county.county === data.county
-        );
+        setSubmitted(true);
+
         const newVisitSpot = {
           id: visitSpotsArrayState.length + 1,
           name: data.name,
           image: data.image,
           location: data.location,
           description: data.description,
-          county: data.county,
-          countyId: county[0].id,
+          county: countyDetails!.county,
+          countyId: countyDetails!.id,
           nearTown: data.town === "yes",
           mountainArea: data.mountain === "yes",
           positiveReviews: [],
           negativeReviews: [],
         };
-        dispatch(displayOrHideSnackbar(true));
         dispatch(addNewVisitSpotToArray(newVisitSpot));
-        onClose();
+        onFormModalClose();
+        setSubmitted(false);
+        openSnackbarHandler("New Visit Spot was successfully created!");
       })}
     >
       <CardHeader
         action={
-          <IconButton aria-label="settings" onClick={onClose}>
+          <IconButton aria-label="settings" onClick={onFormModalClose}>
             <CloseIcon />
           </IconButton>
         }
@@ -109,11 +116,8 @@ const FormModal: React.FC<FormProps> = (props) => {
       />
       {errors.location && <p>{errors.location.message}</p>}
       <label htmlFor="name">County:</label>
-      <input
-        {...register("county", { required: "County field is required" })}
-        id="county"
-      />
-      {errors.county && <p>{errors.county.message}</p>}
+      <FormSelectInput onCountySelect={setCountyValue} />
+      {!countyDetails && submitted && <p>County field is required!</p>}
       <label htmlFor="description">Description:</label>
       <textarea
         {...register("description", {
@@ -138,7 +142,9 @@ const FormModal: React.FC<FormProps> = (props) => {
           />
         </div>
       </div>
-      <button className="formBtn">Submit</button>
+      <button className="formBtn" onClick={() => setSubmitted(true)}>
+        Submit
+      </button>
     </form>
   );
 };

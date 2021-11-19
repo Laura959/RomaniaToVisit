@@ -12,18 +12,18 @@ import "./TripToolCard.css";
 
 interface TripCardProps {
   data: PlaceToVisitObject[][];
-  onClose: () => void;
+  onTripToolCardClose: () => void;
 }
 
 const TripToolCard: React.FC<TripCardProps> = (props) => {
-  const { data, onClose } = props;
+  const { data, onTripToolCardClose } = props;
 
   return (
     <Card className="tripToolCard">
       <CardContent>
         <CardHeader
           action={
-            <IconButton aria-label="settings" onClick={onClose}>
+            <IconButton aria-label="settings" onClick={onTripToolCardClose}>
               <CloseIcon />
             </IconButton>
           }

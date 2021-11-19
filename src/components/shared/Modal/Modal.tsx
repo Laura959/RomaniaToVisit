@@ -2,26 +2,36 @@ import { Dialog } from "@mui/material";
 import FormModal from "./FormModal/FormModal";
 import InfoModal from "./InfoModal/InfoModal";
 import TraditionModal from "./FormModalTradition/FormModalTradition";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import useModal from "../../../hooks/useModal";
 import { RootState } from "../../../reducers/rootReducer";
-import { closeModal } from "../../../actions/modalActions/modalActionCreators";
+import ReactDOM from "react-dom";
 
 const Modal = () => {
-  const dispatch = useDispatch();
+  const { closeModalHandler } = useModal();
   const modalState = useSelector((state: RootState) => state.modals);
 
   const handleClose = () => {
-    dispatch(closeModal());
+    closeModalHandler();
   };
 
   return (
-    <Dialog onClose={handleClose} open={modalState.isModalVisible}>
-      {modalState.modalType === "FORM" && <FormModal onClose={handleClose} />}
-      {modalState.modalType === "INFO" && <InfoModal onClose={handleClose} />}
-      {modalState.modalType === "TRADITIONFORM" && (
-        <TraditionModal onClose={handleClose} />
+    <>
+      {ReactDOM.createPortal(
+        <Dialog onClose={handleClose} open={modalState.isModalVisible}>
+          {modalState.modalType === "FORM" && (
+            <FormModal onFormModalClose={handleClose} />
+          )}
+          {modalState.modalType === "INFO" && (
+            <InfoModal onInfoModalClose={handleClose} />
+          )}
+          {modalState.modalType === "TRADITIONFORM" && (
+            <TraditionModal onTraditionFormClose={handleClose} />
+          )}
+        </Dialog>,
+        document.getElementById("modal-root")!
       )}
-    </Dialog>
+    </>
   );
 };
 

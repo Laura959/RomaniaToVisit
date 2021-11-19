@@ -6,6 +6,10 @@ import TripToolTable from "./TripToolTable/TripToolTable";
 import TripToolCard from "./TripToolCard/TripToolCard";
 import { getCountiesDataArray } from "../../../services/places-to-visit-service";
 import { setCountiesArray } from "../../../actions/countiesActions/countiesActionsCreators";
+import {
+  setShowHideRoutes,
+  setShowHideMap,
+} from "../../../actions/mapActions/mapActionsCreators";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../reducers/rootReducer";
 
@@ -13,12 +17,13 @@ import "./TripTool.css";
 
 const TripTool = () => {
   const dispatch = useDispatch();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [isTripToolCardVisible, setIsTripToolCardVisible] = useState(false);
   const visitSpotsOfSelectedCountiesArrayState = useSelector(
     (state: RootState) => state.visitSpots.visitSpotsOfCountiesArray
   );
+  const mapArrayState = useSelector((state: RootState) => state.map.showMap);
   const selectedCountiesArrayState = useSelector(
     (state: RootState) => state.counties.selectedCountiesArray
   );
@@ -45,6 +50,8 @@ const TripTool = () => {
 
   const createTrip = () => {
     setIsTripToolCardVisible(true);
+    dispatch(setShowHideRoutes(false));
+    dispatch(setShowHideMap(true));
   };
 
   return (
@@ -79,11 +86,11 @@ const TripTool = () => {
           visitSpotsOfSelectedCountiesArrayState.length !== 0 && (
             <TripToolCard
               data={visitSpotsOfSelectedCountiesArrayState}
-              onClose={() => setIsTripToolCardVisible(false)}
+              onTripToolCardClose={() => setIsTripToolCardVisible(false)}
             />
           )}
       </div>
-      <Map countiesData={selectedCountiesArrayState} />
+      {mapArrayState && <Map countiesData={selectedCountiesArrayState} />}
     </>
   );
 };

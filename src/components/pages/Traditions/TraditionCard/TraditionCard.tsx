@@ -37,7 +37,7 @@ const VisitSpotCard: React.FC<CardProps> = (props) => {
                 <span>Location:</span> {traditionData.location}
               </div>
               <div className="traditionsContentInnerDiv">
-                <span>Period:</span>{" "}
+                <span>Date:</span>{" "}
                 {traditionData.origin ? traditionData.origin : "Unknown"}
               </div>
             </div>

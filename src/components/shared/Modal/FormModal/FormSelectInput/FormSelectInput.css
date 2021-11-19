@@ -1,0 +1,12 @@
+.countySelect {
+  border: 0;
+}
+
+.countySelect div {
+  height: 2.5rem;
+  font-size: 14px;
+}
+
+#combo-box-demo {
+  margin-top: -3.5%;
+}

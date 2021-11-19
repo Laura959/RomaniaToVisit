@@ -1,6 +1,10 @@
-import { DISPLAY_HIDE_SNACKBAR } from "./snackbarActions";
+import { OPEN_SNACKBAR, CLOSE_SNACKBAR } from "./snackbarActions";
 
-export const displayOrHideSnackbar = (isDisplayed: boolean) => ({
-  type: DISPLAY_HIDE_SNACKBAR,
-  payload: isDisplayed,
+export const openSnackbar = (text: string) => ({
+  type: OPEN_SNACKBAR,
+  payload: text,
+});
+
+export const closeSnackbar = () => ({
+  type: CLOSE_SNACKBAR,
 });

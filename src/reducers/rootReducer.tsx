@@ -8,6 +8,7 @@ import { SnackBarState, snackbarReducer } from "./snackbarReducer";
 import { CountiesState, countiesReducer } from "./countiesReducer";
 import { ModalState, modalReducer } from "./modalReducer";
 import { TraditionsState, traditionsReducer } from "./traditionsReducer";
+import { MapState, mapReducer } from "./mapReducer";
 
 export interface RootState {
   visitSpots: VisitSpotsState;
@@ -16,6 +17,7 @@ export interface RootState {
   counties: CountiesState;
   modals: ModalState;
   traditions: TraditionsState;
+  map: MapState;
 }
 
 const rootReducer = combineReducers({
@@ -25,6 +27,7 @@ const rootReducer = combineReducers({
   counties: countiesReducer,
   modals: modalReducer,
   traditions: traditionsReducer,
+  map: mapReducer,
 });
 
 export default rootReducer;

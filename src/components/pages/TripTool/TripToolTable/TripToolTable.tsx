@@ -1,9 +1,14 @@
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { Typography } from "@mui/material";
+import { useEffect } from "react";
 import { CountyData } from "../../../../models/dataModels";
 import { useSelector, useDispatch } from "react-redux";
 import { setVisitSpotsOfSelectedCounties } from "../../../../actions/visitSpots/actionCreators";
-import { setSelectedCountiesArray } from "../../../../actions/countiesActions/countiesActionsCreators";
+import {
+  setSelectedCountiesArray,
+  setCountiesWithVisitSpotsArray,
+} from "../../../../actions/countiesActions/countiesActionsCreators";
+import { setShowHideMap } from "../../../../actions/mapActions/mapActionsCreators";
 import { RootState } from "../../../../reducers/rootReducer";
 
 import "./TripToolTable.css";
@@ -31,6 +36,19 @@ const TripToolTable: React.FC<TableProps> = (props) => {
     (state: RootState) => state.counties.countiesArray
   );
 
+  const countiesWithVisitSpots = useSelector(
+    (state: RootState) => state.counties.countiesWithVisitSpotsArray
+  );
+
+  const countiesAndVisitSpots = {
+    counties: countiesDataArrayState,
+    visitSpots: visitSpotsArrayState,
+  };
+
+  useEffect(() => {
+    dispatch(setCountiesWithVisitSpotsArray(countiesAndVisitSpots));
+  }, []);
+
   const getVisitSpotsFromSelectedCounties = (
     selectedCountiesArray: CountyData[]
   ) => {
@@ -51,22 +69,24 @@ const TripToolTable: React.FC<TableProps> = (props) => {
 
   return (
     <>
-      {countiesDataArrayState.length !== 0 ? (
+      {countiesWithVisitSpots.length !== 0 ? (
         <div className="tripToolTable">
           <DataGrid
-            rows={countiesDataArrayState}
+            rows={countiesWithVisitSpots}
             columns={columns}
             pageSize={10}
             rowsPerPageOptions={[10]}
             checkboxSelection
             onSelectionModelChange={(ids) => {
               const selectedIDs = new Set(ids);
-              const selectedRowData = countiesDataArrayState.filter(
+              const selectedRowData = countiesWithVisitSpots.filter(
                 (countyData) => selectedIDs.has(countyData.id)
               );
+              console.log(selectedRowData);
               getVisitSpotsFromSelectedCounties(selectedRowData);
               dispatch(setSelectedCountiesArray(selectedRowData));
               onCountySelect(selectedRowData.length);
+              dispatch(setShowHideMap(false));
               onCheckboxSelect();
             }}
           />

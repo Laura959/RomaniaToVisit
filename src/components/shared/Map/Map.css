@@ -1,9 +1,19 @@
 .leaflet-container {
-  width: 100vw;
-  height: 100vh;
+  width: 1430px;
+  height: 400px;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.leaflet-container button {
+  z-index: 1000;
+  margin-top: 2%;
+  margin-left: 5%;
 }
 
 .leaflet-popup-content-wrapper {
-  min-width: 200px;
-  height: 160px;
+  max-width: 235px;
+  min-width: 170px;
+  height: 150px;
 }
