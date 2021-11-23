@@ -13,6 +13,15 @@ const createRoutineMachineLayer = (props: any) => {
   const instance = L.Routing.control({
     waypoints: newWaypointArray,
     routeWhileDragging: true,
+    lineOptions: {
+      extendToWaypoints: true,
+      missingRouteTolerance: 0,
+      styles: [{ color: "#35baf6", opacity: 1, weight: 5 }],
+    },
+    show: true,
+    addWaypoints: false,
+    fitSelectedRoutes: true,
+    showAlternatives: true,
   });
 
   return instance;

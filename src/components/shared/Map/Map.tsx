@@ -1,4 +1,5 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { useState } from "react";
+import { MapContainer, Marker, Popup, TileLayer, Polygon } from "react-leaflet";
 import { useSelector, useDispatch } from "react-redux";
 import { setShowHideRoutes } from "../../../actions/mapActions/mapActionsCreators";
 import { RootState } from "../../../reducers/rootReducer";
@@ -6,6 +7,7 @@ import { CountyData } from "../../../models/dataModels";
 import AddButton from "../AddCreateButton/AddButton";
 import MapMarkerCard from "./MapMarkerCard/MapMarkerCard";
 import Routing from "./Routing/Routing";
+import { polygonCoordinates } from "../../../data/polygonCoordinates";
 import "leaflet-routing-machine";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 
@@ -22,6 +24,19 @@ const Map: React.FC<MapProps> = (props) => {
     (state: RootState) => state.map.showRoutes
   );
 
+  const rearrangedCoordinates = polygonCoordinates[1].map(
+    (coordinates: any) => [coordinates[1], coordinates[0]]
+  );
+  const romaniaMapView = [
+    [
+      [-90, -360],
+      [90, -360],
+      [90, 360],
+      [-90, 360],
+    ],
+    [...rearrangedCoordinates],
+  ];
+
   const showRoutesHandler = () => {
     if (showRoutesState) {
       dispatch(setShowHideRoutes(false));
@@ -32,8 +47,9 @@ const Map: React.FC<MapProps> = (props) => {
   return (
     <MapContainer
       center={[47.163574, 27.58255]}
-      zoom={6}
+      zoom={5}
       scrollWheelZoom={true}
+      minZoom={4}
       className="leaflet-container"
     >
       <AddButton
@@ -44,6 +60,7 @@ const Map: React.FC<MapProps> = (props) => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      <Polygon positions={romaniaMapView} />
       {showRoutesState ? (
         <Routing waypoints={countiesData} />
       ) : (

@@ -42,6 +42,7 @@ const Login = () => {
       <input
         {...register("username", { required: "Username field is required" })}
         id="username"
+        name="username"
         onChange={() => setIsFormSubmitted(false)}
       />
       {errors.username && <p>{errors.username.message}</p>}
@@ -55,6 +56,7 @@ const Login = () => {
           },
         })}
         id="password"
+        name="password"
         type="password"
         onChange={() => setIsFormSubmitted(false)}
       />
