@@ -26,9 +26,11 @@ const VisitSpots = () => {
   }, []);
 
   const getVisitSpotsArray = async () => {
-    const response = await getPlacesToVisitArray();
-    const visitSpotData = response.data.places;
-    dispatch(setVisitSpots(visitSpotData));
+    try {
+      const response = await getPlacesToVisitArray();
+      const visitSpotData = response.data.places;
+      dispatch(setVisitSpots(visitSpotData));
+    } catch (e) {}
     setIsLoading(false);
   };
 
@@ -38,6 +40,7 @@ const VisitSpots = () => {
         <div className="visitSpotsCardsContainer">
           {visitSpotsArrayState.map((visitSpot: PlaceToVisitObject) => (
             <VisitSpotsCard
+              test-id="test-card-id"
               key={visitSpot.id}
               visitSpotData={visitSpot}
               cardHeight="600"
@@ -64,7 +67,11 @@ const VisitSpots = () => {
           />
         )}
       </div>
-      {!isLoading ? renderVisitSpotssOrMessage() : <LoadingSpinner />}
+      {!isLoading ? (
+        renderVisitSpotssOrMessage()
+      ) : (
+        <LoadingSpinner test-id="test-spinner-id" />
+      )}
     </div>
   );
 };

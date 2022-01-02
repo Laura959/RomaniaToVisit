@@ -42,6 +42,7 @@ const Login = () => {
       <input
         {...register("username", { required: "Username field is required" })}
         id="username"
+        defaultValue="admin"
         name="username"
         onChange={() => setIsFormSubmitted(false)}
       />
@@ -56,6 +57,7 @@ const Login = () => {
           },
         })}
         id="password"
+        defaultValue="admin123"
         name="password"
         type="password"
         onChange={() => setIsFormSubmitted(false)}
