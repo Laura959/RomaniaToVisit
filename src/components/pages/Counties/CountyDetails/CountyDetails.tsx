@@ -45,7 +45,7 @@ const CountyDetails = () => {
     if (countiesArrayState.length !== 0) {
       return (
         <>
-          <h1 className="countyDetailsTitle">{selectedCounty[0].title}</h1>
+          <h1 className="countyDetailsTitle">{selectedCounty[0].county}</h1>
           <div className="countyDetailsMiddleContainer">
             <div className="imageContainer">
               <img
