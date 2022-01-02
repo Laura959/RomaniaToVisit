@@ -1,3 +1,8 @@
+# Welcome to RomaniaToVisit
+
+RomaniaToVisit project is a place where you can find the best places worth visting in Romania and plan your trip. The project consists of Login page, Welcome, Visitspots page where you can find the best places in Romania and read about them, Counties page where you can search for counties, TripTool page is for planning your trip and Traditions page shows some of Romania's common traditions. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
